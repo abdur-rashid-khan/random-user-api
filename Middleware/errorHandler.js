@@ -1,5 +1,5 @@
-// function errorHandler(err, req, res, next) {
-//     res.send(err.message);
-// }
+function errorHandler(err, req, res, next) {
+   res.send(err.message);
+}
 
-// module.exports = errorHandler;
+module.exports = errorHandler;
