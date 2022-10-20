@@ -1,32 +1,32 @@
-// const express = require('express');
-// const app = express();
-// const cors = require('cors');
-// const userRouter = require('./Routes/user.route');
-// const errorHandler = require('./Middleware/errorHandler');
-// const port = process.env.PORT || 5000;
+const express = require('express');
+const app = express();
+const cors = require('cors');
+const userRouter = require('./Routes/user.route');
+const errorHandler = require('./Middleware/errorHandler');
+const port = process.env.PORT || 5000;
 
 
 // /* Application Middleware */
-// app.use(express.json())
-// app.use(cors())
+app.use(express.json())
+app.use(cors())
 
 
 // /* Home Route */
-// app.get('/', (req, res) => {
-//     res.send("Node Mongodb Assignment-1");
-// })
+app.get('/', (req, res) => {
+    res.send("Node Mongodb Assignment-1");
+})
 
 
 
 // /* All User Route */
-// app.use("/user", userRouter);
+app.use("/user", userRouter);
 
 
 
 // /* Undefined Route */
-// app.all('*', (req, res) => {
-//     res.send('No Route Found')
-// })
+app.all('*', (req, res) => {
+    res.send('No Route Found')
+})
 
 
 /* Server Listening on PORT */
